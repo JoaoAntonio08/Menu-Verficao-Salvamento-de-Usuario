@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Verificacao-E-Duas-Telas-BETA/1.0.0": {
+        "runtime": {
+          "Verificacao-E-Duas-Telas-BETA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Verificacao-E-Duas-Telas-BETA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

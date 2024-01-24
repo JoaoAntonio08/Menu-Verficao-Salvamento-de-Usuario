@@ -1,0 +1,15 @@
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\bin\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.exe
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\bin\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.deps.json
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\bin\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.runtimeconfig.json
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\bin\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.dll
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\bin\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.pdb
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.AssemblyInfoInputs.cache
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.AssemblyInfo.cs
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.csproj.CoreCompileInputs.cache
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.sourcelink.json
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.dll
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\refint\Verificacao-E-Duas-Telas-BETA.dll
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.pdb
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\Verificacao-E-Duas-Telas-BETA.genruntimeconfig.cache
+C:\Users\joaob\OneDrive\Documentos\GitHub\Verificacao-E-Duas-Telas-BETA\obj\Debug\net8.0\ref\Verificacao-E-Duas-Telas-BETA.dll
