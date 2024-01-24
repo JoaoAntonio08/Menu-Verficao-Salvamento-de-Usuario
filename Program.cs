@@ -91,7 +91,6 @@ class Program
         // @ - conhecido como prefixo de string verbatim. Ele permite que você crie strings longas que abrangem várias linhas e que não precisam escapar caracteres especiais.
         // ^ - Este é o caractere de início de linha. Ele indica que a correspondência deve começar no início da string.
         // \d - Este é um metacaracter que corresponde a qualquer dígito decimal. Em outras palavras, corresponde a qualquer número de 0 a 9.
-        // {5,10} - Estes são quantificadores que especificam que o padrão anterior (neste caso, um dígito) deve aparecer pelo menos 5 vezes, mas não mais do que 10 vezes.
         // $ - Este é o caractere de fim de linha. Ele indica que a correspondência deve terminar no final da string.
         Regex regex = new Regex(@"^\d$");
         return regex.IsMatch(senha);
