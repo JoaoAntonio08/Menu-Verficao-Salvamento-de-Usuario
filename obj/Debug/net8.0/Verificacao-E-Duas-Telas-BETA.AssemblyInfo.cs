@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Verificacao-E-Duas-Telas-BETA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8312cd23c733df632943b82bcc5b0e9d1974b51d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef7f76b09e2878e5eb40219b1f734b5178842b11")]
 [assembly: System.Reflection.AssemblyProductAttribute("Verificacao-E-Duas-Telas-BETA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Verificacao-E-Duas-Telas-BETA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
