@@ -1,7 +1,7 @@
 # Menu - Verficação - Salvamento de Usuário
 
-  Neste programa temos um menu simples com 4 opções:
-1- Registar uma senha
+Neste programa temos um menu simples com 4 opções:
+<br/>1- Registar uma senha
 2- Registrar sua idade
 3- Ver Usuários
 4- Sair
