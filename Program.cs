@@ -13,6 +13,7 @@ class Program
     public static string ultimaTelaVisitada;
     static void Main()
     {
+        // Menu
         string respota;
         Console.Clear();
 
@@ -44,17 +45,19 @@ class Program
             }
             else if (respota != "4")
             {
+                System.Console.WriteLine("");
                 System.Console.WriteLine("Tela Inválida");
+                System.Console.WriteLine("");
             }
-            
-            if(respota != "4")
+
+            if (respota != "4") // Caso tenha clicado algum número inválido temos a opção de voltar ao menu
             {
                 System.Console.WriteLine("------------------------------------------------------------");
                 System.Console.WriteLine("Pressione qualquer tecla par voltar ao menu");
                 System.Console.WriteLine("------------------------------------------------------------");
                 Console.ReadLine();
             }
-            
+
 
         } while (respota != "4");
     }
@@ -109,7 +112,9 @@ class Program
             }
             else
             {
+                System.Console.WriteLine("");
                 System.Console.WriteLine("Nome inválido. Digite novamente.");
+                System.Console.WriteLine("");
             }
         } while (!nomeCorreto);
 
@@ -126,7 +131,9 @@ class Program
             }
             else
             {
+                System.Console.WriteLine("");
                 System.Console.WriteLine("Senha inválida. Digite novamente.");
+                System.Console.WriteLine("");
             }
         } while (!senhaCorreta);
 
@@ -134,7 +141,10 @@ class Program
         System.Console.WriteLine("Agora você está registrado no nosso sistema");
         System.Console.WriteLine("------------------------------------------------------------");
 
+
+        // Salvar os dados registrados em um arquivo .txt criado na função SalvarUsuariosNoArquivo
         SalvarUsuarioNoArquivo(strNome, senha);
+        // Chama tela final
         TelaFinal();
     }
 
@@ -150,6 +160,7 @@ class Program
         // {5,10} - Estes são quantificadores que especificam que o padrão anterior (neste caso, um dígito) deve aparecer pelo menos 5 vezes, mas não mais do que 10 vezes.
         // $ - Este é o caractere de fim de linha. Ele indica que a correspondência deve terminar no final da string.
     }
+    //Função para verificar se o nome contém apenas letras
     public static bool ValidaNome(string nome)
     {
         return nome.All(char.IsLetter);
@@ -166,19 +177,10 @@ class Program
         System.Console.WriteLine("------------------------------------------------------------");
         idade = int.Parse(Console.ReadLine());
 
+        // Salvar os dados registrados em um arquivo .txt criado na função SalvarUsuariosNoArquivo
         SalvarUsuarioNoArquivo(strNome, idade);
+        // Chama tela final
         TelaFinal();
-    }
-    static void MostrarTerceiraTela() // Caso não tenha um arquivo de texto, está criando um novo e registrando
-    {
-        using (StreamReader reader = new StreamReader("usuarios.txt"))
-        {
-            string line;
-            while ((line = reader.ReadLine()) != null)
-            {
-                System.Console.WriteLine(line);
-            }
-        }
     }
 
     public static void TelaFinal()
@@ -195,7 +197,23 @@ class Program
         {
             System.Console.WriteLine($"De acordo com as informações dadas, você tem: {idade} anos");
         }
+
     }
+    
+
+    static void MostrarTerceiraTela() // Caso não tenha um arquivo de texto, está criando um novo e registrando
+    {
+        using (StreamReader reader = new StreamReader("usuarios.txt"))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                System.Console.WriteLine(line);
+            }
+        }
+    }
+
+
 
     public static void voltarMenu()
     {
@@ -217,9 +235,10 @@ class Program
         using (StreamWriter writer = File.AppendText("usuarios.txt")) // Escrevendo usuários no arquivo
         {
             writer.WriteLine("-------------------------------");
+
             writer.WriteLine($"Nome:{nome}");
             if (ultimaTelaVisitada == "Tela 1")
-            {   
+            {
                 writer.WriteLine($"Senha: {senha}");
                 writer.WriteLine("-------------------------------");
             }
