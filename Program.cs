@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
@@ -8,78 +9,74 @@ using System.Text.RegularExpressions;
 class Program
 {
     // Declarando variáveis globais
-    public static string strNome, strNomeTentativa, strSenhaTentativa;
+    public static string strSenhaTentativa, nomeUsuario, resposta;
     public static int senha, SenhaTentativa, idade;
     public static string ultimaTelaVisitada;
     static void Main()
     {
         // Menu
-        string respota;
         Console.Clear();
-
+        System.Console.WriteLine("##### PARA INICIARMOS DIGITE SEU NOME #####");
+        nomeUsuario = Console.ReadLine();
+        // Verifica se o Nome contém apenas letras
+        if (!ValidaNome(nomeUsuario))
+        {
+            System.Console.WriteLine("Nome Inválido, Digite apenas letras");
+            Console.Clear();
+            voltarMenu();
+            resposta = Console.ReadLine();
+        }
         do
         {
             voltarMenu();
-            respota = Console.ReadLine();
+            resposta = Console.ReadLine();
 
-            if (respota == "1")
+            if (resposta == "1")
             {
                 Console.Clear();
                 // Tela inicial
                 ultimaTelaVisitada = "Tela 1";
                 MostrarPrimeiraTela();
             }
-            else if (respota == "2")
+            else if (resposta == "2")
             {
                 Console.Clear();
                 // Segunda Tela
                 ultimaTelaVisitada = "Tela 2";
                 MostrarSegundaTela();
             }
-            else if (respota == "3")
+            else if (resposta == "3")
             {
                 Console.Clear();
                 // Terceira tela
                 MostrarTerceiraTela();
 
             }
-            else if (respota != "4")
+            else if (resposta != "4")
             {
                 System.Console.WriteLine("");
                 System.Console.WriteLine("Tela Inválida");
                 System.Console.WriteLine("");
             }
 
-            if (respota != "4") // Caso tenha clicado algum número inválido temos a opção de voltar ao menu
+            if (resposta != "4") // Caso tenha clicado algum número inválido temos a opção de voltar ao menu
             {
                 System.Console.WriteLine("------------------------------------------------------------");
                 System.Console.WriteLine("Pressione qualquer tecla par voltar ao menu");
                 System.Console.WriteLine("------------------------------------------------------------");
                 Console.ReadLine();
+                Console.Clear();
             }
 
 
-        } while (respota != "4");
+        } while (resposta != "4");
     }
 
     static void MostrarPrimeiraTela()
     {
-        // Solicita ao usuário que digite seu nome
-        System.Console.WriteLine("------------------------------------------------------------");
-        System.Console.WriteLine("Para realizar seu cadastro digite seu nome");
-        System.Console.WriteLine("------------------------------------------------------------");
-        strNome = Console.ReadLine();
-
-        // Verifica se o Nome contém apenas letras
-        if (!ValidaNome(strNome))
-        {
-            System.Console.WriteLine("Nome Inválido, Digite apenas letras");
-            return;
-        }
-
         // Solicita ao usuário que digite sua senha
         System.Console.WriteLine("------------------------------------------------------------");
-        System.Console.WriteLine("Para finalizar crie uma senha");
+        System.Console.WriteLine("Agora crie um senha para você");
         System.Console.WriteLine("É importante lembrar que a senha deve conter apenas números e");
         System.Console.WriteLine("Deve conter entre 5 à 10 caracteres");
         System.Console.WriteLine("------------------------------------------------------------");
@@ -94,30 +91,7 @@ class Program
         // Aqui a variável strSenhaTentativa passa a ser somente senha, eu criei a strSenhaTentativa para poder se usada na função
         senha = int.Parse(strSenhaTentativa);
 
-        // Inicializa as variáveis booleanas que controlam os loops
-        // Só mudam para verdadeiras caso seja o mesmo nome ou senha digitados na primeira vez
-        bool nomeCorreto = false;
         bool senhaCorreta = false;
-
-        // Loop para verificar o nome
-        do
-        {
-            System.Console.WriteLine("------------------------------------------------------------");
-            System.Console.WriteLine("Para confirmar que é você digite o nome de usuário novamente");
-            System.Console.WriteLine("------------------------------------------------------------");
-            strNomeTentativa = Console.ReadLine();
-            if (strNome == strNomeTentativa)
-            {
-                nomeCorreto = true;
-            }
-            else
-            {
-                System.Console.WriteLine("");
-                System.Console.WriteLine("Nome inválido. Digite novamente.");
-                System.Console.WriteLine("");
-            }
-        } while (!nomeCorreto);
-
         // Loop para verificar a senha
         do
         {
@@ -138,14 +112,16 @@ class Program
         } while (!senhaCorreta);
 
         System.Console.WriteLine("------------------------------------------------------------");
-        System.Console.WriteLine("Agora você está registrado no nosso sistema");
+        System.Console.WriteLine("Por fim escreva sua idade");
         System.Console.WriteLine("------------------------------------------------------------");
-
+        idade = int.Parse(Console.ReadLine());
 
         // Salvar os dados registrados em um arquivo .txt criado na função SalvarUsuariosNoArquivo
-        SalvarUsuarioNoArquivo(strNome, senha);
+        SalvarUsuarioNoArquivo(nomeUsuario, senha, idade);
+        Console.Clear();
         // Chama tela final
         TelaFinal();
+
     }
 
     // Função Criada para Verificar se senha é composta por apenas números e com caracteres de 5 a 10 números
@@ -168,38 +144,18 @@ class Program
 
     static void MostrarSegundaTela()
     {
-        System.Console.WriteLine("------------------------------------------------------------");
-        System.Console.WriteLine("Por Favor Informe seu nome");
-        System.Console.WriteLine("------------------------------------------------------------");
-        strNome = Console.ReadLine();
-        System.Console.WriteLine("------------------------------------------------------------");
-        System.Console.WriteLine("Agora escreva sua idade");
-        System.Console.WriteLine("------------------------------------------------------------");
-        idade = int.Parse(Console.ReadLine());
+        Console.Clear();
+        System.Console.WriteLine("Aqui é a segunda tela");
 
-        // Salvar os dados registrados em um arquivo .txt criado na função SalvarUsuariosNoArquivo
-        SalvarUsuarioNoArquivo(strNome, idade);
-        // Chama tela final
-        TelaFinal();
     }
 
     public static void TelaFinal()
     {
-        Console.Clear();
-
-        System.Console.WriteLine($"Sejam Bem Vindo {strNome}");
-
-        if (ultimaTelaVisitada == "Tela 1")
-        {
-            System.Console.WriteLine($"Sua senha atual é: {senha}");
-        }
-        else if (ultimaTelaVisitada == "Tela 2")
-        {
-            System.Console.WriteLine($"De acordo com as informações dadas, você tem: {idade} anos");
-        }
-
+        System.Console.WriteLine($"Sejam Bem Vindo {nomeUsuario}");
+        System.Console.WriteLine($"Sua senha atual é: {senha}");
+        System.Console.WriteLine($"De acordo com as informações dadas, você tem: {idade} anos");
     }
-    
+
 
     static void MostrarTerceiraTela() // Caso não tenha um arquivo de texto, está criando um novo e registrando
     {
@@ -213,13 +169,12 @@ class Program
         }
     }
 
-
-
     public static void voltarMenu()
     {
+        #region Apresentação de menu
         Console.Clear();
-        System.Console.WriteLine("##################### OLÁ SEJA BEM-VINDO #####################");
-        System.Console.WriteLine("Neste sistema você pode cadastrar sua senha ou idade.");
+        System.Console.WriteLine($"##################### Olá Seja Bem-Vindo {nomeUsuario} #####################");
+        System.Console.WriteLine($"Neste sistema {nomeUsuario} pode cadastrar sua senha ou idade.");
         System.Console.WriteLine("Selecione uma opção:");
         System.Console.WriteLine("1 - Cadastrar Senha");
         System.Console.WriteLine("2 - Cadastrar Idade");
@@ -228,26 +183,18 @@ class Program
 
 
         System.Console.WriteLine("Qual sua opção:");
-
+        #endregion Apresentação de menu
     }
-    static void SalvarUsuarioNoArquivo(string nome, int senha)
+    static void SalvarUsuarioNoArquivo(string nome, int senha, int idade)
     {
         using (StreamWriter writer = File.AppendText("usuarios.txt")) // Escrevendo usuários no arquivo
         {
+
             writer.WriteLine("-------------------------------");
-
-            writer.WriteLine($"Nome:{nome}");
-            if (ultimaTelaVisitada == "Tela 1")
-            {
-                writer.WriteLine($"Senha: {senha}");
-                writer.WriteLine("-------------------------------");
-            }
-            else if (ultimaTelaVisitada == "Tela 2")
-            {
-                writer.WriteLine($"idade: {idade} anos");
-                writer.WriteLine("-------------------------------");
-            }
-
+            writer.WriteLine($"Nome: {nome}");
+            writer.WriteLine($"Senha: {senha}");
+            writer.WriteLine($"idade: {idade} anos");
+            writer.WriteLine("-------------------------------");
             writer.Close();
 
         }
