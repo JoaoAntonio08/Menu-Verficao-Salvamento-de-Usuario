@@ -1,17 +1,27 @@
-# Menu - Verficação - Salvamento de Usuário
+Este programa em C# é um sistema de cadastro de usuários que permite aos usuários registrarem uma senha e sua idade. Aqui está um resumo das principais funcionalidades:
 
-Neste programa temos um menu simples com 4 opções:
-<br/>1- Registar uma senha
-<br/>2- Registrar sua idade
-<br/>3- Ver Usuários
-<br/>4- Sair
+1. **Autenticação de Usuários**:
+   - Os usuários inserem seus nomes, e o programa verifica se contêm apenas letras.
+   - Eles têm a opção de cadastrar uma senha e uma idade.
 
-<br/>1- Um programa bem simples, que pede para criar um nome de usuário e uma senha, logo em seguida, pede para confirmar as informações, depois que finalizado temos a opção de voltar ao menu...
+2. **Cadastro de Senha**:
+   - Os usuários podem cadastrar uma senha composta apenas por números, com comprimento entre 5 e 10 caracteres.
+   - A senha é verificada para garantir que atende aos critérios estabelecidos.
 
-<br/>2- Um programa bem básico, pede para você criar um nome de usuário, e depois dizer sua idade, ao final ter a opção de voltar ao menu...
+3. **Cadastro de Idade**:
+   - Os usuários podem cadastrar sua idade, que é armazenada junto com seus outros dados.
 
-<br/>3- Ver Usuários é um arquivo .txt que quaso não existe é criado dentro do programa onde registra nome de usuário senha ou idade, dita pelo usaário ao selecionar uma das outras opções, é como se fosse um banco de dados em um arquivo de texto
+4. **Salvamento em Arquivo**:
+   - Os dados dos usuários (nome, senha e idade) são armazenados em um arquivo de texto chamado "usuarios.txt".
 
- <br/>4- A opção sair é muito simples, e muito intuitivo, ao selecionar o programa encerra
+5. **Menu Interativo**:
+   - O programa apresenta um menu interativo onde os usuários podem selecionar as opções de cadastro de senha, cadastro de idade ou visualização dos usuários cadastrados.
+   - Há também uma opção para sair do programa.
 
-  <br/>OBS: Caso na opção de Menu clique algum número que não seja os mostrados, aparece uma mensagem de "Tela Inválida"
+6. **Validação de Entradas**:
+   - O programa valida as entradas dos usuários, garantindo que estejam de acordo com os critérios estabelecidos.
+
+7. **Apresentação de Dados**:
+   - Após o cadastro, o programa apresenta uma mensagem de boas-vindas ao usuário, mostrando seu nome, senha atual e idade cadastrada.
+
+Em resumo, este programa oferece uma maneira simples para os usuários cadastrarem uma senha e sua idade, com funcionalidades de validação de entrada e salvamento em arquivo.
