@@ -1,27 +1,49 @@
-Este programa em C# é um sistema de cadastro de usuários que permite aos usuários registrarem uma senha e sua idade. Aqui está um resumo das principais funcionalidades:
+# Menu de Verificação e Salvamento de Usuário
 
-1. **Autenticação de Usuários**:
-   - Os usuários inserem seus nomes, e o programa verifica se contêm apenas letras.
-   - Eles têm a opção de cadastrar uma senha e uma idade.
+![Linguagem](https://img.shields.io/badge/feito%20em-C%23-blue?style=for-the-badge)
 
-2. **Cadastro de Senha**:
-   - Os usuários podem cadastrar uma senha composta apenas por números, com comprimento entre 5 e 10 caracteres.
-   - A senha é verificada para garantir que atende aos critérios estabelecidos.
+## 📋 Descrição
 
-3. **Cadastro de Idade**:
-   - Os usuários podem cadastrar sua idade, que é armazenada junto com seus outros dados.
+Este é um programa básico desenvolvido em **C#** que apresenta um menu interativo com algumas opções para o usuário. Além disso, o sistema permite o salvamento de dados de usuários, facilitando a persistência das informações inseridas durante o uso.
 
-4. **Salvamento em Arquivo**:
-   - Os dados dos usuários (nome, senha e idade) são armazenados em um arquivo de texto chamado "usuarios.txt".
+## 🚀 Funcionalidades
 
-5. **Menu Interativo**:
-   - O programa apresenta um menu interativo onde os usuários podem selecionar as opções de cadastro de senha, cadastro de idade ou visualização dos usuários cadastrados.
-   - Há também uma opção para sair do programa.
+- Exibe um menu de opções para o usuário
+- Permite cadastrar e salvar dados do usuário
+- Verifica e exibe informações salvas
+- Opção para encerrar o programa de forma segura
 
-6. **Validação de Entradas**:
-   - O programa valida as entradas dos usuários, garantindo que estejam de acordo com os critérios estabelecidos.
+## 💻 Tecnologias Utilizadas
 
-7. **Apresentação de Dados**:
-   - Após o cadastro, o programa apresenta uma mensagem de boas-vindas ao usuário, mostrando seu nome, senha atual e idade cadastrada.
+- C#
+- .NET
 
-Em resumo, este programa oferece uma maneira simples para os usuários cadastrarem uma senha e sua idade, com funcionalidades de validação de entrada e salvamento em arquivo.
+## 🛠 Como executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/JoaoAntonio08/Menu-Verficao-Salvamento-de-Usuario.git
+   ```
+2. Abra o projeto em sua IDE de preferência (Visual Studio, VS Code, etc).
+3. Compile e execute o projeto.
+
+## ✏️ Como usar
+
+1. Ao rodar o programa, o menu será exibido no console.
+2. Escolha a opção desejada digitando o número correspondente.
+3. Siga as instruções na tela para cadastrar, salvar ou visualizar os dados.
+
+## 📦 Estrutura do Projeto
+
+```
+Menu-Verficao-Salvamento-de-Usuario/
+│
+├── Program.cs
+├── Usuario.cs
+├── README.md
+└── [outros arquivos/folders]
+```
+
+## 🤝 Contribuições
+
+Sinta-se livre para abrir issues ou enviar pull requests para sugerir melhorias!
